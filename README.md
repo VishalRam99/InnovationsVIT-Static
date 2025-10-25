@@ -1,4 +1,4 @@
-# Static Website
+# VIT Innovations - Static Website
 
 A lightweight static site organized under a single WebStatic directory, with HTML templates and static assets (styles, scripts, images, and documents).
 
@@ -7,7 +7,7 @@ A lightweight static site organized under a single WebStatic directory, with HTM
 You can view the site by opening the main template directly in a browser or by serving it with a simple static server.
 
 - Open directly (no server):
-  - Open WebStatic/templates/index.html in your browser.
+  - Open VIT-Innovations.html in your browser.
 
 - Serve with Node.js (recommended):
   - Ensure Node.js (v16+) and npm are installed.
@@ -27,6 +27,7 @@ Note: The site assumes the web root is the WebStatic directory. When using a ser
 
 ## Project Structure
 
+- VIT-Innovations.html 
 - WebStatic/
   - templates/ — HTML templates (e.g., main entry page and other sections)
   - static/
