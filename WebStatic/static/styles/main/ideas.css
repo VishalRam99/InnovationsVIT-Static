@@ -1,0 +1,52 @@
+/* Typography utility to ensure Poppins where needed */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Intro section styling (mirrors other pages) */
+.intro {
+  padding: 50px;
+  max-width: 80%;
+  margin: auto;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Generic content section for the ideas page */
+.ideas-section {
+  padding: 20px 10%;
+  line-height: 1.6;
+}
+
+.ideas-section h2 {
+  margin: 25px 0 10px;
+}
+
+/* Lists spacing */
+.ideas-ol {
+  padding-left: 20px;
+}
+
+.ideas-ul-nested {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+/* Submit block spacing overrides */
+.ideas-submit {
+  padding: 0 10% 40px;
+}
+
+.ideas-submit h2 {
+  margin: 10px 0 14px;
+}
+
+/* Placeholder box for Google Form embed */
+.ideas-form-placeholder {
+  width: 100%;
+  min-height: 400px;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

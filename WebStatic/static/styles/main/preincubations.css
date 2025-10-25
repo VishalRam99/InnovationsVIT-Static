@@ -1,0 +1,72 @@
+
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 1px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.intro {
+  padding: 50px;
+  max-width: 80%;
+  margin: auto;
+  font-size: 25px;
+  text-align: center;
+}
+
+.labs-heading {
+    background: #270D5C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+.lab-grids {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 85%;
+  margin: auto;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background: #fff;
+    margin: 20px;
+}
+
+.card h3 {
+    background: #270D5C;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.card ul {
+    padding: 25px;
+}
+
+.card li {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+}

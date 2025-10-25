@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Innovation Week 2026 | Events</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Base styles (existing in project) and page-specific styles -->
+    <link rel="stylesheet" href="../../static/styles/base.css" />
+    <link rel="stylesheet" href="../../static/styles/events/innovation-week-26.css" />
+</head>
+<body>
+<!-- Header with Events dropdown -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="../index.html" aria-label="Go to Home">Innovations</a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <img src="../../static/images/main/iic_logo.png" alt="Innovation Week 2026 Logo" class="logo-image">
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul class="nav-list">
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Events</a>
+                    <ul class="dropdown" role="menu" aria-label="Events submenu">
+                        <li role="none">
+                            <a role="menuitem" href="./innovation-week-26.html" class="dropdown-link">Innovation Week 2026</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Add other top-level nav items as needed
+                <li class="nav-item"><a class="nav-link" href="../ideas.html">Ideas</a></li>
+                <li class="nav-item"><a class="nav-link" href="../preincubations.html">Preincubations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../iic.html">IIC</a></li>
+                -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="content">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Innovation Week 2026</h1>
+            <p class="lead">
+                Join our nation-wide hackathon celebrating creativity, collaboration, and cutting-edge solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- General instructions -->
+    <section class="section instructions">
+        <div class="container">
+            <h2>General instructions</h2>
+            <ul class="instruction-list">
+                <li>Form your team of up to 4 participants.</li>
+                <li>Choose a problem statement from the provided tracks.</li>
+                <li>Bring your own laptops and essential accessories.</li>
+                <li>Respect the code of conduct and collaborate responsibly.</li>
+                <li>Submission details and schedule will be announced at kickoff.</li>
+            </ul>
+            <p class="note">More details, tracks and resources will be shared soon.</p>
+        </div>
+    </section>
+
+    <!-- Spacer -->
+    <section class="section spacer">
+        <div class="container">
+            <hr class="divider" />
+        </div>
+    </section>
+
+    <!-- Registration form embed -->
+    <section class="section registration" id="register">
+        <div class="container">
+            <h2>Register your team</h2>
+            <p class="muted">Fill the Google Form below to confirm your participation.</p>
+
+            <div class="form-embed responsive-iframe">
+                <!-- Replace FORM_ID with your actual Google Form ID -->
+                <iframe
+                        title="Innovation Week 2026 Registration"
+                        src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        loading="lazy"
+                        allowfullscreen
+                >Loading…</iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© VIT Innovations. All rights reserved.</p>
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="../index.html">Home</a>
+            <a href="#register">Register</a>
+        </nav>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../../static/scripts/base.js" defer></script>
+<script src="../../static/scripts/events/innovation-week-26.js" defer></script>
+<noscript>Please enable JavaScript to use the dropdown and mobile navigation.</noscript>
+</body>
+</html>

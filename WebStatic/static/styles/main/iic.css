@@ -1,0 +1,179 @@
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 1px;
+}
+.banner img {
+    width: 100%;
+}
+
+.banner-text {
+  background: #f9f9f9;
+  font-size: 50px;
+  text-align: left;
+  font-weight: 500;
+  position: absolute;
+  bottom: 70px;
+  padding: 10px 50px 10px 50px;
+}
+
+.banner-text img {
+  width: 50%;
+  height: auto;
+}
+
+.intro {
+  font-size: 200%;
+  background: #1b005d;
+  color: #fff;
+  padding: 10% 10%;
+  margin: 5px;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.iic-header-container {
+  font-weight: 500;
+  font-size: 40px;
+  background: #270D5C;
+  position: absolute;
+  top: 50px;
+  padding: 10px 50px 10px 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: #555555 2px 2px 2px;
+}
+
+/* Student Members of IIC */
+.iic-students {
+  padding: 60px 5% 80px;
+  background: #f7f7fb;
+  text-align: center;
+    align-items: center;
+}
+.iic-students h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1b005d;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.iic-students-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.iic-students-grid.core-leads {
+  margin: 24px auto 40px;
+}
+.iic-students-grid.core-leads .member-card {
+  /* Make core leaders same width as domain cards */
+  grid-column: span 3;
+}
+
+.iic-students-grid.domains .member-card {
+  grid-column: span 3;
+}
+
+@media (max-width: 1100px) {
+  .iic-students-grid.domains .member-card { grid-column: span 4; }
+}
+@media (max-width: 800px) {
+  .iic-students-grid.core-leads .member-card { grid-column: span 12; }
+  .iic-students-grid.domains .member-card { grid-column: span 6; }
+}
+@media (max-width: 520px) {
+  .iic-students-grid.domains .member-card { grid-column: span 12; }
+}
+
+.member-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  border: 1px solid rgba(27,0,93,0.08);
+}
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+.member-card .avatar {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+}
+.member-card .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay with LinkedIn logo */
+.member-card .overlay-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(27,0,93,0.0) 0%, rgba(27,0,93,0.6) 100%);
+  opacity: 0;
+  transition: opacity 200ms ease;
+  text-decoration: none;
+}
+.member-card:hover .overlay-link { opacity: 1; }
+.member-card .overlay-link .linkedin-logo {
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.member-card .info {
+  padding: 14px 16px 18px;
+}
+.member-card .info h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #270D5C;
+  letter-spacing: 0.2px;
+}
+.member-card .info .name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Role accents */
+.role-convener .info h3 { color: #7b2cff; }
+.role-coconvener .info h3 { color: #ff6b35; }
+.domain .info h3 { color: #1b005d; }
+
+/* Objectives section placeholder polish to better match */
+.objectives {
+  padding: 40px 5% 20px;
+}
+.objectives .objectives-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.objectives .objective { grid-column: span 7; min-height: 180px; background: #fff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.objectives .objective-img { grid-column: span 5; min-height: 180px; background: #eee; border-radius: 12px; }
