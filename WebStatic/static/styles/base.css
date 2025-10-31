@@ -17,6 +17,8 @@ header {
     border-bottom: 2px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 100;
+    gap: 8px;
+    padding-right: 8px;
 }
 
 header img {
@@ -28,10 +30,9 @@ header img {
 header h1 {
     margin: 5px;
     padding: 5px;
-    font-size: 300%;
+    font-size: clamp(20px, 3.5vw, 40px);
     font-weight: bold;
     color: #FFFF;
-
 }
 
 header a {
@@ -39,12 +40,32 @@ header a {
     text-decoration: none;
 }
 
+/* Mobile nav toggle (hamburger) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+.nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    border-radius: 1px;
+}
+
 .navbar {
     display: flex;
     flex-grow: 2;
     justify-content: space-evenly;
     overflow: hidden;
-    font-size: 200%;
+    font-size: clamp(16px, 1.9vw, 22px);
 }
 
 .navbar a {
@@ -54,13 +75,13 @@ header a {
     padding: 14px 16px;
     text-decoration: none;
     vertical-align: auto;
-    transition-duration: 0.4s;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .dropdown {
     float: left;
     overflow: hidden;
-    transition-duration: 0.4s;
+    transition: 0.2s ease;
 }
 
 .dropdown .dropbtn {
@@ -70,9 +91,10 @@ header a {
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-    transition-duration: 0.4s;
+    font-family: inherit;
+    margin: 0;
+    transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .navbar a:hover, .dropbtn:hover {
@@ -84,10 +106,15 @@ header a {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    transition-duration: 0.4s;
+}
+
+/* Show on hover or focus for accessibility (desktop) */
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a {
@@ -97,27 +124,20 @@ header a {
     text-decoration: none;
     display: block;
     text-align: left;
-    transition-duration: 0.4s;
+    transition: background-color 0.2s ease;
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
-    transition-duration: 0.4s;
-    font-size: 120%;
 }
 
-.dropdown:hover .dropdown-content {
-    transition: display 0.4s;
-    display: block;
-    transition-duration: 0.4s;
-}
-
+/* Footer */
 .footer {
     font-family: 'Rajdhani', sans-serif;
     border-top: 2px solid black;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 50px;
-    margin-top: 50px ;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 .footer-content {
@@ -129,7 +149,7 @@ header a {
     width: 100%;
     background: #270D5C;
     color: white;
-    padding: 50px;
+    padding: clamp(20px, 5vw, 50px);
 }
 
 .footer-item {
@@ -140,16 +160,18 @@ header a {
     align-items: center;
 }
 .footer-content h2 {
-    font-size: 300%;
+    font-size: clamp(20px, 3vw, 32px);
 }
 
 .footer-content h3 {
     padding: 5px 5px 5px 0;
     margin: 5px 5px 5px 0;
+    font-size: clamp(14px, 2.2vw, 18px);
 }
 
 .footer-left {
     flex-direction: row;
+    gap: 12px;
 }
 
 .footer-left-text {
@@ -161,6 +183,7 @@ header a {
 .footer-left img {
     width: 30%;
     flex: 0 0 auto;
+    max-width: 120px;
 }
 
 .footer-middle {
@@ -199,4 +222,80 @@ header a {
     max-width: 100%;
     padding: 0 3px 2px 2px;
     margin: 0 3px 2px 2px;
+}
+
+/* Footer credit line */
+.footer-content::after {
+    content: "Site was done by Innovations Dept, IIC";
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 12px;
+    font-size: clamp(12px, 1.4vw, 16px);
+    opacity: 0.9;
+}
+
+/* Responsive navigation & footer */
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+        padding: 8px 6px;
+    }
+    header img {
+        width: auto;
+        height: 44px;
+    }
+    .nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+    .navbar {
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+        background: #270D5C;
+    }
+    .navbar.open {
+        max-height: 70vh;
+        opacity: 1;
+        visibility: visible;
+        padding-bottom: 8px;
+    }
+    .navbar a, .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding: 12px 16px;
+    }
+    /* disable hover open on mobile, use JS-added .open */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .dropdown.open .dropdown-content {
+        display: block;
+        position: static;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    .footer-item {
+        min-width: 100%;
+        justify-content: flex-start;
+        margin: 6px 0;
+    }
+    .footer-left img {
+        width: 56px;
+        max-width: none;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .navbar, .dropdown, .dropdown-content, .navbar a, .dropbtn {
+        transition: none !important;
+    }
 }

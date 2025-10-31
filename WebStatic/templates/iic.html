@@ -15,7 +15,12 @@
 <header>
     <img src="../static/images/base/logo.png" alt="VIT Innovations Logo">
     <h1 class="hero"><a href="http://innovations.vit.ac.in">VIT INNOVATIONS</a></h1>
-    <nav class="navbar">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <nav class="navbar" id="primary-nav">
         <div class="dropdown">
             <button class="dropbtn">Innovations</button>
             <div class="dropdown-content">
@@ -62,215 +67,292 @@
 </section>
 
 <section class="iic-students font-poppins">
-    <h2>Student Members of IIC</h2>
+    <h2>IIC Domains</h2>
 
-    <!-- Core Student Leaders -->
-    <div class="iic-students-grid core-leads">
-        <!-- Student Convener cum Head of Innovation -->
-        <div class="member-card role-convener">
-            <div class="avatar">
-                <img src="../static/images/main/Vishal.jpg" alt="Student Convener cum Head of Innovation">
-                <a class="overlay-link" href="https://www.linkedin.com/in/vishalram99" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 1 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 1 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 1. Replace this text with a brief description of the domain's purpose and activities.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-1-head.jpg" alt="Domain 1 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Student Convener & Head of Innovation</h3>
-                <p class="name">Vishal Ram K N</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-1-coordinator.jpg" alt="Domain 1 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-
-        <!-- Student Co-convener and Head of Events & Operations -->
-        <div class="member-card role-coconvener">
-            <div class="avatar">
-                <img src="../static/images/main/iic/student-coconvener.jpg" alt="Student Co-convener and Head of Events & Operations">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Co-convener & Head of Events and Operations</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
     </div>
 
-    <!-- Domain Heads and Coordinators (7 domains) -->
-    <div class="iic-students-grid domains">
-        <!-- Repeat this block for 7 domains -->
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-1-head.jpg" alt="Domain 1 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 2 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 2 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 2. Replace this text with a brief description of the domain's focus.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/students/Devapriya.jpg" alt="Domain 2 Head">
+                    <a class="overlay-link" href="https://www.linkedin.com/in/devapriya-ratheesh-2ba01528b" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Devapriya Ratheesh</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 1 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/students/Rajdeep.jpg" alt="Domain 2 Coordinator">
+                    <a class="overlay-link" href="https://www.linkedin.com/in/rajdeep-deb-5ab1442a6" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Rajdeep Deb</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-1-coordinator.jpg" alt="Domain 1 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 1 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-2-head.jpg" alt="Domain 2 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 3 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 3 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 3. Replace this text with the domain overview.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-3-head.jpg" alt="Domain 3 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 2 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-3-coordinator.jpg" alt="Domain 3 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-2-coordinator.jpg" alt="Domain 2 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 2 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-3-head.jpg" alt="Domain 3 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 4 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 4 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 4. Replace this text with the domain overview.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-4-head.jpg" alt="Domain 4 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 3 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-4-coordinator.jpg" alt="Domain 4 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-3-coordinator.jpg" alt="Domain 3 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 3 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-4-head.jpg" alt="Domain 4 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 5 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 5 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 5. Replace this text with the domain overview.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-5-head.jpg" alt="Domain 5 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 4 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-5-coordinator.jpg" alt="Domain 5 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-4-coordinator.jpg" alt="Domain 4 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 4 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-5-head.jpg" alt="Domain 5 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 6 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 6 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 6. Replace this text with the domain overview.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-6-head.jpg" alt="Domain 6 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 5 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-6-coordinator.jpg" alt="Domain 6 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-5-coordinator.jpg" alt="Domain 5 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 5 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-6-head.jpg" alt="Domain 6 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
+    <!-- Domain 7 -->
+    <div class="domain-section">
+        <h3 class="domain-title">Domain 7 Name</h3>
+        <p class="domain-intro">Short introduction about Domain 7. Replace this text with the domain overview.</p>
+        <div class="iic-students-grid domain-leads">
+            <div class="member-card role-head">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-7-head.jpg" alt="Domain 7 Head">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Head Name</h3>
+                    <p class="name">Domain Head</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Domain 6 Head</h3>
-                <p class="name">Student Name</p>
-            </div>
-        </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-6-coordinator.jpg" alt="Domain 6 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 6 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
-        </div>
-
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-7-head.jpg" alt="Domain 7 Head">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 7 Head</h3>
-                <p class="name">Student Name</p>
+            <div class="member-card role-coordinator">
+                <div class="avatar">
+                    <img src="../static/images/main/iic/domain-7-coordinator.jpg" alt="Domain 7 Coordinator">
+                    <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
+                        <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="info">
+                    <h3>Coordinator Name</h3>
+                    <p class="name">Domain Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="member-card domain">
-            <div class="avatar">
-                <img src="../static/images/main/iic/domain-7-coordinator.jpg" alt="Domain 7 Coordinator">
-                <a class="overlay-link" href="#" target="_blank" aria-label="LinkedIn profile">
-                    <img class="linkedin-logo" src="../static/images/base/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-            <div class="info">
-                <h3>Domain 7 Coordinator</h3>
-                <p class="name">Student Name</p>
-            </div>
+        <div class="domain-members">
+            <h4>Domain Members</h4>
+            <ul class="members-list">
+                <li>Member 1</li>
+                <li>Member 2</li>
+                <li>Member 3</li>
+                <li>Member 4</li>
+            </ul>
         </div>
     </div>
 </section>

@@ -1,0 +1,105 @@
+/* Typography utility */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header strip under the global header */
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 5%;
+  background: #f7f7fb;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.header-text img {
+  height: 48px;
+  width: auto;
+}
+.header-text p {
+  margin: 0;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  color: #270D5C;
+  text-align: center;
+}
+
+/* Intro copy */
+.intro {
+  padding: 40px 10%;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.8;
+  text-align: center;
+  color: #222;
+}
+
+/* Funds section containing two cards */
+.funds-section {
+  padding: 0 5% 60px;
+}
+
+.funds-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Two columns on desktop, single column on mobile */
+.form-card {
+  grid-column: span 6;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(27,0,93,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 18px 18px 10px;
+}
+@media (max-width: 900px) {
+  .form-card { grid-column: span 12; }
+}
+
+.form-card h3 {
+  margin: 4px 2px 8px;
+  font-size: clamp(18px, 2vw, 22px);
+  color: #270D5C;
+}
+
+.form-card .desc {
+  margin: 0 2px 6px;
+  color: #333;
+}
+
+.form-card .meta {
+  margin: 0 2px 14px;
+  color: #666;
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+/* Embed wrapper to prevent overflow and ensure responsiveness */
+.form-embed {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 1100px;
+  border: 0;
+  background: #fff;
+}
+
+/* Slightly taller on smaller screens as Google Forms expand vertically */
+@media (max-width: 600px) {
+  .form-embed iframe {
+    min-height: 1300px;
+  }
+}

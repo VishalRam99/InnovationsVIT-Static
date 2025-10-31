@@ -12,40 +12,42 @@
 
 .banner-title {
     font-weight: 500;
-    font-size: 40px;
+    font-size: clamp(18px, 4vw, 40px);
     background: #270D5C;
     position: absolute;
-    top: 50px;
-    padding: 10px 50px 10px 50px;
+    top: clamp(8px, 4vw, 50px);
+    padding: 10px 50px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: #555555 2px 2px 2px;
 }
 
 .banner-slogan {
-    width: 60%;
+    width: min(92%, 900px);
     text-align: right;
     font-weight: 500;
-    font-size: 50px;
+    font-size: clamp(16px, 5vw, 50px);
     position: absolute;
-    bottom: 50px;
+    bottom: clamp(8px, 4vw, 50px);
     right: 16px;
-    padding: 10px 50px 10px 50px;
+    padding: 10px 50px;
 }
 
 .banner img {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 .intro {
-    font-size: 200%;
+    font-size: clamp(16px, 2.4vw, 22px);
     background: #1b005d;
     color: #fff;
-    padding: 10% 10%;
+    padding: clamp(24px, 8vw, 80px) 10%;
     margin: 5px;
     text-align: center;
-    line-height: 2;
-    letter-spacing: 2px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 .cells {
@@ -56,11 +58,13 @@
     align-items: center;
     padding: 2%;
     background: #fff;
+    gap: 10px;
 }
 
 .rectangle {
     width: auto;
     padding: 10px;
+    max-width: 100%;
 }
 
 .cell-left {
@@ -72,7 +76,6 @@
     margin: 15px 15px 10px 6%;
     right: 0;
     flex-grow: 1;
-
 }
 .cell-right {
     right: 0;
@@ -85,25 +88,26 @@
     flex-grow: 1;
 }
 
-.cell-logo img {
-    height: 150%;
+/* Fix: target the image with the class .cell-logo */
+.cell-logo {
+    height: auto;
+    max-width: min(220px, 45vw);
+    width: clamp(120px, 40vw, 220px);
     padding: 10px;
 }
 
 .cells p {
     font-weight: 500;
-    font-size: 300%;
+    font-size: clamp(18px, 4.5vw, 32px);
     padding: 10px 20px;
-    letter-spacing: 2px;
-    transition-duration: 0.4s;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
 }
 
 .cells p:hover {
     color: #270D5C;
     text-decoration: none;
     cursor: pointer;
-    font-size: 325%;
-    transition-duration: 0.2s;
 }
 
 /*Hover Animation - Underlining*/
@@ -136,15 +140,14 @@
   transform-origin: bottom center;
 }
 /*Hover Animation Ends*/
-/* Revert to original container only layout */
+
 .carousel-container {
-    width: 80%;
-    max-width: 1000px;
+    width: min(92%, 1000px);
     margin: 50px auto;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    height: 500px; /* Set a fixed height for the container */
+    height: clamp(220px, 60vh, 500px);
     background: linear-gradient(90deg, rgba(39,13,92,0.08), rgba(39,13,92,0.02));
 }
 
@@ -175,15 +178,8 @@
     cursor: pointer;
 }
 
-/* Removed side captions */
-
-.carousel-container::before {
-    left: 15px;
-}
-
-.carousel-container::after {
-    right: 15px;
-}
+.carousel-container::before { left: 15px; }
+.carousel-container::after { right: 15px; }
 
 .carousel-container::before:hover,
 .carousel-container::after:hover {
@@ -208,30 +204,27 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
-.dot.active {
-    background-color: rgba(255, 255, 255, 1);
-}
-
+.dot.active { background-color: rgba(255, 255, 255, 1); }
 
 .message {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: clamp(16px, 5vw, 40px);
   background: #270D5C;
   color: white;
+  gap: 10px;
 }
 
 .quote {
   flex: 1;
   padding: 20px;
-  font-size: 25px;
+  font-size: clamp(16px, 2.2vw, 22px);
   text-align: center;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .quote strong {
-  font-size: 35px;
+  font-size: clamp(18px, 3.2vw, 28px);
   text-shadow: 0 0 3px #f9f9f9;
 }
 
@@ -239,25 +232,31 @@
   flex: 1;
   padding: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .quote-image img {
-  width: 70%;
+  width: min(90%, 380px);
   border-radius: 10px;
   box-shadow: 0px 0px 5px #eee;
 }
 
 .faculty {
-  padding: 40px;
+  padding: clamp(16px, 5vw, 40px);
   text-align: center;
 }
 
 .faculty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+  justify-content: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.faculty-member {
+  max-width: 160px;
+  margin: 0 auto;
 }
 
 .faculty-member img {
@@ -268,4 +267,11 @@
 .faculty-member p {
   margin-top: 5px;
   font-size: 14px;
+}
+
+/* Disable font-size bump on small screens where hover isn't relevant */
+@media (max-width: 700px) {
+  .cells p:hover {
+    font-size: inherit;
+  }
 }

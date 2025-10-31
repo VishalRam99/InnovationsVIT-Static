@@ -202,6 +202,80 @@ body {
     background: var(--divider);
 }
 
+/* Rules & Guidelines section */
+.rules h2 {
+    margin: 0 0 10px;
+    font-size: clamp(1.35rem, 0.9vw + 1.1rem, 1.9rem);
+}
+
+.rules .meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 12px 0 20px;
+    color: var(--muted);
+}
+
+.rules .meta p {
+    margin: 0;
+}
+
+/* Vertical blocks */
+.rules-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rule-block {
+    padding: 18px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--divider);
+    border-left: 4px solid var(--brand);
+    border-radius: 12px;
+}
+
+.rule-block h3 {
+    margin: 0 0 10px;
+    font-size: clamp(1.05rem, 0.6vw + 0.9rem, 1.35rem);
+}
+
+.rule-block h4 {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.rule-block p {
+    margin: 0 0 10px;
+    color: var(--muted);
+}
+
+.rule-block ul,
+.rule-block ol {
+    margin: 0 0 8px 18px;
+    padding: 0;
+}
+
+.rule-block li + li {
+    margin-top: 6px;
+}
+
+.rules .timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+}
+
+.rules .timeline-day {
+    padding-left: 12px;
+    border-left: 2px dashed var(--divider);
+}
+
+.rules .timeline-day h4 {
+    margin-top: 0;
+}
+
 /* Responsive Google Form embed */
 .responsive-iframe {
     position: relative;
