@@ -59,4 +59,4 @@ This is a static site; you can deploy it to any static hosting service (e.g., Gi
 
 ## License
 
-If a LICENSE file is present in this repository, its terms apply. Otherwise, usage is considered internal/unlicensed by default—please add a LICENSE file if needed.
+A LICENSE file is present in this repository, its terms apply. 
