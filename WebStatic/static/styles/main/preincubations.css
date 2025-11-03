@@ -8,11 +8,51 @@
   position: relative;
   text-align: center;
   color: white;
-  padding: 1px;
+  padding: 20px;
+  background: #f7f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner img {
-    width: 100%;
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 200ms ease;
+}
+
+.banner img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .banner img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 16px;
+  }
+
+  .banner img {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 12px;
+  }
+
+  .banner img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
 }
 
 .intro {
@@ -35,11 +75,31 @@
 
 .lab-grids {
   display: grid;
-  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding: 2rem;
   max-width: 85%;
   margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .lab-grids {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .lab-grids {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lab-grids {
+    padding: 1rem;
+  }
 }
 
 .card {

@@ -236,7 +236,7 @@
 }
 
 .quote-image img {
-  width: min(90%, 380px);
+  width: min(95%, 480px);
   border-radius: 10px;
   box-shadow: 0px 0px 5px #eee;
 }
@@ -248,14 +248,14 @@
 
 .faculty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   justify-content: center;
-  gap: 18px;
+  gap: 32px;
   margin-top: 16px;
 }
 
 .faculty-member {
-  max-width: 160px;
+  max-width: 240px;
   margin: 0 auto;
 }
 
