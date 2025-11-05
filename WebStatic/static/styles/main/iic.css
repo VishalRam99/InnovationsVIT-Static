@@ -29,14 +29,16 @@
 }
 
 .intro {
-  font-size: 200%;
+  font-size: clamp(16px, 2.1vw, 20px);
   background: #1b005d;
   color: #fff;
-  padding: 10% 10%;
-  margin: 5px;
+  padding: clamp(36px, 9vw, 80px) clamp(10px, 8vw, 96px);
+  margin: 8px auto;
   text-align: center;
-  line-height: 2;
-  letter-spacing: 2px;
+  line-height: 1.8;
+  letter-spacing: 0.7px;
+  max-width: 1100px;
+  border-radius: 14px;
 }
 
 .iic-header-container {
@@ -53,7 +55,7 @@
 
 /* Student Members / Domains */
 .iic-students {
-  padding: 60px 5% 80px;
+  padding: clamp(36px, 8vw, 80px) 5% clamp(40px, 9vw, 90px);
   background: #f7f7fb;
   text-align: center;
   align-items: center;
@@ -192,11 +194,11 @@
 /* Domain section container */
 .domain-section {
   max-width: 1100px;
-  margin: 28px auto;
+  margin: clamp(22px, 4vw, 34px) auto;
   background: #fff;
   border: 1px solid rgba(27,0,93,0.08);
   border-radius: 16px;
-  padding: 28px;
+  padding: clamp(22px, 5vw, 32px);
   text-align: left;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
@@ -242,15 +244,24 @@
 
 /* Objectives section placeholder polish to better match */
 .objectives {
-  padding: 40px 5% 20px;
+  padding: clamp(24px, 6vw, 48px) 5% clamp(12px, 4vw, 32px);
 }
 .objectives .objectives-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
-.objectives .objective { grid-column: span 7; min-height: 180px; background: #fff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
-.objectives .objective-img { grid-column: span 5; min-height: 180px; background: #eee; border-radius: 12px; }
+.objectives .objective {
+  min-height: 180px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.objectives .objective-img {
+  min-height: 180px;
+  background: #eee;
+  border-radius: 12px;
+}
 
 /* Header strip under global header for alignment */
 .header-text {
@@ -318,6 +329,35 @@
     grid-template-columns: 1fr;
   }
   .domain-section {
-    padding: 20px;
+    padding: clamp(18px, 6vw, 26px);
+  }
+}
+
+@media (max-width: 640px) {
+  .intro {
+    padding: clamp(24px, 9vw, 48px) 8%;
+  }
+  .domain-section {
+    margin: clamp(18px, 6vw, 28px) 12px;
+  }
+  .members-list {
+    gap: 8px;
+  }
+  .iic-students {
+    padding: clamp(28px, 9vw, 50px) 4% clamp(32px, 10vw, 64px);
+  }
+}
+
+@media (max-width: 480px) {
+  .domain-section {
+    padding: clamp(16px, 8vw, 24px);
+  }
+  .members-list li {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+  .objectives .objective,
+  .objectives .objective-img {
+    min-height: 140px;
   }
 }

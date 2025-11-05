@@ -51,14 +51,14 @@
 }
 
 .cells {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    padding: 2%;
-    background: #fff;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: clamp(16px, 4vw, 32px) 4%;
+  background: #fff;
+  gap: clamp(12px, 3vw, 28px);
 }
 
 .rectangle {
@@ -67,41 +67,47 @@
     max-width: 100%;
 }
 
-.cell-left {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    margin: 15px 15px 10px 6%;
-    right: 0;
-    flex-grow: 1;
-}
+.cell-left,
 .cell-right {
-    right: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    text-align: center;
-    margin: 15px 6% 15px 15px;
-    flex-grow: 1;
+  width: min(100%, 960px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: clamp(12px, 4vw, 32px);
+  margin: 0;
+  padding: clamp(8px, 2vw, 16px) clamp(12px, 4vw, 32px);
+  border-radius: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.cell-left {
+  flex-direction: row;
+}
+
+.cell-right {
+  flex-direction: row-reverse;
+}
+
+.cell-left:hover,
+.cell-right:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 /* Fix: target the image with the class .cell-logo */
 .cell-logo {
-    height: auto;
-    max-width: min(220px, 45vw);
-    width: clamp(120px, 40vw, 220px);
-    padding: 10px;
+  height: auto;
+  max-width: min(220px, 35vw);
+  width: clamp(120px, 28vw, 220px);
+  padding: 10px;
 }
 
 .cells p {
-    font-weight: 500;
-    font-size: clamp(18px, 4.5vw, 32px);
-    padding: 10px 20px;
-    letter-spacing: 1px;
-    transition: color 0.2s ease;
+  font-weight: 500;
+  font-size: clamp(18px, 3.8vw, 26px);
+  padding: 10px 20px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
 }
 
 .cells p:hover {
@@ -142,8 +148,8 @@
 /*Hover Animation Ends*/
 
 .carousel-container {
-    width: min(92%, 1000px);
-    margin: 50px auto;
+  width: min(92%, 1000px);
+  margin: clamp(32px, 8vw, 60px) auto;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
@@ -209,40 +215,57 @@
 .message {
   display: flex;
   flex-wrap: wrap;
-  padding: clamp(16px, 5vw, 40px);
+  padding: clamp(20px, 5vw, 48px);
   background: #270D5C;
   color: white;
-  gap: 10px;
+  gap: clamp(12px, 3vw, 24px);
+  align-items: center;
 }
 
 .quote {
   flex: 1;
-  padding: 20px;
+  padding: clamp(12px, 3vw, 24px);
   font-size: clamp(16px, 2.2vw, 22px);
-  text-align: center;
   line-height: 1.8;
+  max-width: 600px;
+    text-align: center;
 }
 
 .quote strong {
   font-size: clamp(18px, 3.2vw, 28px);
   text-shadow: 0 0 3px #f9f9f9;
+  display: inline-block;
+  margin-top: 6px;
 }
 
 .quote-image {
   flex: 1;
-  padding: 20px;
+  padding: clamp(12px, 3vw, 24px);
   text-align: center;
   font-size: clamp(14px, 2vw, 18px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 3vw, 18px);
 }
 
 .quote-image img {
-  width: min(95%, 480px);
+  width: min(95%, 600px);
   border-radius: 10px;
-  box-shadow: 0px 0px 5px #eee;
+  box-shadow: 0 0 5px #eee;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote-image p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 .faculty {
-  padding: clamp(16px, 5vw, 40px);
+  padding: clamp(20px, 6vw, 54px);
   text-align: center;
 }
 
@@ -273,5 +296,105 @@
 @media (max-width: 700px) {
   .cells p:hover {
     font-size: inherit;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-title {
+    padding: 10px 28px;
+  }
+  .banner-slogan {
+    font-size: clamp(16px, 4vw, 28px);
+      color: black;
+    padding: 10px 28px;
+    right: clamp(8px, 3vw, 18px);
+  }
+  .cell-left,
+  .cell-right {
+    width: min(100%, 720px);
+  }
+}
+
+@media (max-width: 700px) {
+  .rectangle {
+    display: none;
+  }
+  .cell-left,
+  .cell-right {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+    padding: clamp(12px, 4vw, 24px);
+  }
+  .cell-left,
+  .cell-right {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  }
+  .cells p {
+    padding: 4px 8px;
+  }
+  .banner-title {
+    top: 14px;
+  }
+  .banner-slogan {
+    bottom: 18px;
+      color: black;
+  }
+  .message {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .quote,
+  .quote-image {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding-bottom: 32px;
+  }
+  .banner-title,
+  .banner-slogan {
+    position: static;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 16px;
+    max-width: 92%;
+    text-align: center;
+    box-shadow: none;
+  }
+  .banner-slogan {
+    font-size: clamp(15px, 5.5vw, 22px);
+    padding: 12px 18px;
+  }
+  .banner-title {
+    padding: 12px 18px;
+  }
+  .message {
+    padding: clamp(18px, 7vw, 36px);
+  }
+  .quote,
+  .quote-image {
+    padding: clamp(8px, 4vw, 18px);
+    text-align: center;
+  }
+  .faculty-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: clamp(200px, 56vh, 360px);
+  }
+  .faculty-member p {
+    font-size: 13px;
+  }
+  .banner-slogan {
+    text-align: center;
   }
 }

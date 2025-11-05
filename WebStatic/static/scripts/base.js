@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('primary-nav');
   const toggle = document.querySelector('.nav-toggle');
+  if (!nav || !nav.classList.contains('navbar')) {
+    return;
+  }
 
   // Toggle mobile nav
-  if (toggle && nav) {
+  if (toggle) {
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));

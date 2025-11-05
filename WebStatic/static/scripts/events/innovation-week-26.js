@@ -35,51 +35,59 @@
     }
 
     function initDropdown() {
-        const eventsItem = qs('.nav-item.has-dropdown');
-        if (!eventsItem) return;
+        const dropdownItems = qsa('.nav-item.has-dropdown');
+        if (!dropdownItems.length) return;
 
-        const link = qs('.nav-item.has-dropdown > .nav-link');
-        const dropdown = qs('.nav-item.has-dropdown > .dropdown');
+        const mobileQuery = window.matchMedia('(max-width: 900px)');
 
-        // Hover/focus handled by CSS. Add keyboard and touch support here.
-
-        // Keyboard: expand on focus in, collapse on focus out
-        if (dropdown) {
-            const focusables = qsa('a, button', dropdown);
-            eventsItem.addEventListener('focusin', () => {
-                eventsItem.classList.add('open');
-                if (link) link.setAttribute('aria-expanded', 'true');
-            });
-            eventsItem.addEventListener('focusout', (e) => {
-                // If focus leaves the menu entirely
-                if (!eventsItem.contains(e.relatedTarget)) {
-                    eventsItem.classList.remove('open');
-                    if (link) link.setAttribute('aria-expanded', 'false');
-                }
-            });
-        }
-
-        // Touch devices: tap to toggle
-        if (link && dropdown) {
-            link.addEventListener('click', (e) => {
-                // If mobile nav is open, clicking should toggle the submenu instead of navigating
-                const isMobile = window.matchMedia('(max-width: 900px)').matches;
-                if (isMobile || e.pointerType === 'touch') {
-                    e.preventDefault();
-                    const willOpen = !eventsItem.classList.contains('open');
-                    eventsItem.classList.toggle('open', willOpen);
-                    link.setAttribute('aria-expanded', String(willOpen));
-                }
-            });
-        }
-
-        // Close dropdown on outside click (mobile)
-        document.addEventListener('click', (e) => {
-            if (!eventsItem.classList.contains('open')) return;
-            if (!eventsItem.contains(e.target)) {
-                eventsItem.classList.remove('open');
-                if (link) link.setAttribute('aria-expanded', 'false');
+        const closeItem = (item) => {
+            item.classList.remove('open');
+            const trigger = qs('.nav-link', item);
+            if (trigger) {
+                trigger.setAttribute('aria-expanded', 'false');
             }
+        };
+
+        dropdownItems.forEach((item) => {
+            const trigger = qs('.nav-link', item);
+            const menu = qs('.dropdown', item);
+            if (!trigger || !menu) return;
+
+            trigger.setAttribute('aria-expanded', 'false');
+
+            item.addEventListener('focusin', () => {
+                dropdownItems.forEach((other) => {
+                    if (other !== item) closeItem(other);
+                });
+                item.classList.add('open');
+                trigger.setAttribute('aria-expanded', 'true');
+            });
+
+            item.addEventListener('focusout', (e) => {
+                if (!item.contains(e.relatedTarget)) {
+                    closeItem(item);
+                }
+            });
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (!mobileQuery.matches) return;
+                const willOpen = !item.classList.contains('open');
+                dropdownItems.forEach(closeItem);
+                if (willOpen) {
+                    item.classList.add('open');
+                    trigger.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileQuery.matches) return;
+            dropdownItems.forEach((item) => {
+                if (!item.contains(e.target)) {
+                    closeItem(item);
+                }
+            });
         });
     }
 
