@@ -2,222 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Innovation Week 2026 | Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(270deg, #111, #1a0033, #002233, #330022);
+            background-size: 800% 800%;
+            animation: bgShift 15s ease infinite;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
 
-    <!-- Base styles (existing in project) and page-specific styles -->
-    <link rel="stylesheet" href="../../static/styles/base.css" />
-    <link rel="stylesheet" href="../../static/styles/events/innovation-week-26.css" />
+        /* Animated floating particles (subtle stars) */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 3px 3px;
+            animation: twinkle 6s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes bgShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.3; }
+            to { opacity: 0.6; }
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            letter-spacing: 3px;
+            color: #00fff2;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #00fff2, 0 0 40px #00fff2;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #ffb3ec;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ff66ff;
+        }
+
+        .countdown {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #ff9e00;
+            text-shadow: 0 0 15px #ff9e00, 0 0 30px #ff6600;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .cta-button {
+            padding: 15px 45px;
+            background: linear-gradient(45deg, #ff00c3, #ff9e00, #00fff2);
+            background-size: 200% 200%;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: gradientMove 4s infinite alternate;
+            box-shadow: 0 0 20px #ff00c3, 0 0 40px #00fff2;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #ff9e00, 0 0 60px #ff00c3;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .socials {
+            margin-top: 40px;
+            font-size: 1.2em;
+        }
+
+        .socials a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #00fff2;
+            text-shadow: 0 0 10px #00fff2;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #bbb;
+        }
+    </style>
 </head>
 <body>
-<!-- Header with Events dropdown -->
-<header class="site-header">
-    <div class="container header-inner">
-        <a class="logo" href="../index.html" aria-label="Go to Home">Innovations</a>
 
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-            <span class="bar" aria-hidden="true"></span>
-            <span class="bar" aria-hidden="true"></span>
-            <span class="bar" aria-hidden="true"></span>
-            <span class="sr-only">Toggle navigation</span>
-        </button>
+<div class="container">
+    <h1>Innovation Week Hackathon 2026</h1>
+    <h2>The countdown has begun!</h2>
+    <div class="countdown" id="countdown"></div>
 
-        <img src="../../static/images/main/iic_logo.png" alt="Innovation Week 2026 Logo" class="logo-image">
+    <a href="https://chat.whatsapp.com/CybdNlpk53Z0S4DZ8U6oQX"><button class="cta-button">Keep Me Posted!</button></a>
 
-        <nav id="primary-nav" class="nav" aria-label="Primary">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-<!--                <li class="nav-item has-dropdown">-->
-<!--                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Innovations</a>-->
-<!--                    <ul class="dropdown" role="menu" aria-label="Innovations submenu">-->
-<!--                        <li role="none"><a role="menuitem" href="../iic.html" class="dropdown-link">Institution's Innovation Council</a></li>-->
-<!--                        <li role="none"><a role="menuitem" href="../edc.html" class="dropdown-link">Entrepreneurship Development Cell</a></li>-->
-<!--                        <li role="none"><a role="menuitem" href="https://iprttcell.vit.ac.in/" class="dropdown-link" target="_blank" rel="noopener">IPR &amp; Technology Transfer Cell</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-                <li class="nav-item has-dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Events</a>
-                    <ul class="dropdown" role="menu" aria-label="Events submenu">
-                        <li role="none"><a role="menuitem" href="./innovation-week-26.html" class="dropdown-link">Innovation Week 2026</a></li>
-                    </ul>
-                </li>
-<!--                <li class="nav-item has-dropdown">-->
-<!--                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Students Corner</a>-->
-<!--                    <ul class="dropdown" role="menu" aria-label="Students Corner submenu">-->
-<!--                        <li role="none"><a role="menuitem" href="../ideas.html" class="dropdown-link">Ideas</a></li>-->
-<!--                        <li role="none"><a role="menuitem" href="../join-iic.html" class="dropdown-link">Join IIC</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--                <li class="nav-item"><a class="nav-link" href="../preincubations.html">Pre-incubation</a></li>-->
-            </ul>
-        </nav>
+    <div class="socials">
+        <a href="https://www.instagram.com/iic_vitvellore/">Instagram</a>
+        <a href="https://www.youtube.com/channel/UCAhxh3zkkiIkpTppi_SpDLg">YouTube</a>
+        <a href="https://in.linkedin.com/company/iicvit">LinkedIn</a>
     </div>
-</header>
 
-<main id="content">
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Innovation Week 2026</h1>
-            <p class="lead">
-                Join our nation-wide hackathon celebrating creativity, collaboration, and cutting-edge solutions.
-            </p>
-        </div>
-    </section>
-
-    <!-- Rules & Guidelines -->
-    <section class="section rules" id="rules">
-        <div class="container">
-            <h2>Hackathon Rules & Guidelines</h2>
-
-            <div class="meta">
-                <p><strong>Event:</strong> Inter-College Hackathon @ VIT Vellore — <em>Innovation Week 2026</em></p>
-                <p><strong>Duration:</strong> 2 Days (48 Hours)</p>
-                <p><strong>Mode:</strong> Onsite Hackathon (Hardware & Software Tracks)</p>
-            </div>
-
-            <div class="rules-stack">
-                <article class="rule-block">
-                    <h3>Domains / Tracks</h3>
-                    <p>Participants can innovate in any of the following areas:</p>
-                    <ol>
-                        <li><strong>Artificial Intelligence (AI) / Machine Learning (ML)</strong></li>
-                        <li><strong>Robotics</strong></li>
-                        <li><strong>Internet of Things (IoT)</strong></li>
-                        <li><strong>Augmented Reality (AR) / Virtual Reality (VR)</strong></li>
-                        <li><strong>Open Innovation</strong></li>
-                    </ol>
-                </article>
-
-                <article class="rule-block">
-                    <h3>Team Formation Rules</h3>
-                    <ul>
-                        <li>Each team must consist of <strong>exactly 4 members</strong>.</li>
-                        <li><strong>All team members must belong to the same college</strong> (no cross-college teams allowed).</li>
-                        <li>Each participant can join <strong>only one team</strong>.</li>
-                        <li>Participants must be <strong>currently enrolled students</strong> of a recognized college or university.</li>
-                    </ul>
-                </article>
-
-                <article class="rule-block">
-                    <h3>Event Format</h3>
-                    <div class="timeline">
-                        <div class="timeline-day">
-                            <h4>Day 1</h4>
-                            <ul>
-                                <li>Registration and problem statement announcement.</li>
-                                <li>Idea pitching and mentor sessions.</li>
-                                <li>Development and prototyping phase begins.</li>
-                            </ul>
-                        </div>
-                        <div class="timeline-day">
-                            <h4>Day 2</h4>
-                            <ul>
-                                <li>Continuation of development and mentor reviews.</li>
-                                <li>Final submission, demo, and judging.</li>
-                                <li>Valedictory and prize distribution ceremony.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="rule-block">
-                    <h3>Project Guidelines</h3>
-                    <ul>
-                        <li>Projects can be <strong>hardware-based, software-based, or hybrid</strong>.</li>
-                        <li>Solutions must be developed <strong>entirely during the hackathon period</strong>.</li>
-                        <li>Use of <strong>open-source tools, frameworks, and models</strong> is allowed (with proper credits).</li>
-                        <li>Each team should maintain a <strong>GitHub (or similar) repository</strong> for submissions.</li>
-                        <li>A <strong>demo and short presentation</strong> are mandatory during the final judging round.</li>
-                    </ul>
-                </article>
-
-                <article class="rule-block">
-                    <h3>Judging Criteria</h3>
-                    <p>Projects will be evaluated based on:</p>
-                    <ol>
-                        <li><strong>Innovation & Originality</strong> – Novelty of the idea and creative thinking.</li>
-                        <li><strong>Technical Implementation</strong> – Quality, functionality, and complexity of the solution.</li>
-                        <li><strong>Impact & Practicality</strong> – Usefulness, scalability, and real-world relevance.</li>
-                        <li><strong>Design & User Experience</strong> – Clarity, accessibility, and polish of the prototype.</li>
-                        <li><strong>Presentation & Teamwork</strong> – Delivery, communication, and coordination during demo.</li>
-                    </ol>
-                </article>
-
-                <article class="rule-block">
-                    <h3>General Rules</h3>
-                    <ul>
-                        <li>Participants must carry their <strong>valid college ID cards</strong>.</li>
-                        <li><strong>Cross-college teams are not permitted.</strong></li>
-                        <li><strong>Plagiarized or pre-built projects</strong> will result in immediate disqualification.</li>
-                        <li>Teams must adhere to the <strong>submission deadlines</strong> strictly.</li>
-                        <li>The decision of the <strong>judging panel</strong> will be <strong>final and binding</strong>.</li>
-                        <li>Participants must uphold <strong>professional and respectful conduct</strong> at all times.</li>
-                        <li><strong>Accommodation and meals</strong> may be provided for outstation participants (details will follow).</li>
-                    </ul>
-                </article>
-
-                <article class="rule-block">
-                    <h3>Awards & Recognition</h3>
-                    <ul>
-                        <li><strong>Attractive cash prizes, goodies, and internship opportunities</strong> for top teams.</li>
-                        <li><strong>Certificates of Participation</strong> for all eligible teams.</li>
-                    </ul>
-                    <p><strong>Special recognitions for:</strong></p>
-                    <ul>
-                        <li><strong>Best Hardware Project</strong></li>
-                        <li><strong>Best Software Project</strong></li>
-                        <li><strong>Most Innovative Solution</strong></li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Spacer -->
-    <section class="section spacer">
-        <div class="container">
-            <hr class="divider" />
-        </div>
-    </section>
-
-    <!-- Registration form embed -->
-    <section class="section registration" id="register">
-        <div class="container">
-            <h2>Register your team</h2>
-            <p class="muted">Fill the Google Form below to confirm your participation.</p>
-
-            <div class="form-embed responsive-iframe">
-                <!-- Replace FORM_ID with your actual Google Form ID -->
-                <iframe
-                        title="Innovation Week 2026 Registration"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSenkXMVT1rqS9CwzfR3cbhSL1keAAT7LW7eetaKha6Ym2mdXQ/viewform?embedded=true"
-                        loading="lazy"
-                        allowfullscreen
-                >Loading…</iframe>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <p>© VIT Innovations. All rights reserved.</p>
-        <nav class="footer-nav" aria-label="Footer">
-            <a href="../index.html">Home</a>
-            <a href="#register">Register</a>
-        </nav>
+    <div class="footer">
+        <p>&copy; 2025 VIT Innovations | All Rights Reserved</p>
     </div>
-</footer>
+</div>
 
-<!-- Scripts -->
-<script src="../../static/scripts/base.js" defer></script>
-<script src="../../static/scripts/events/innovation-week-26.js" defer></script>
-<noscript>Please enable JavaScript to use the dropdown and mobile navigation.</noscript>
+<script>
+    // Countdown Timer
+    const countdownDate = new Date("Jan 20, 2026 00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "🚀 EVENT STARTED!";
+        }
+    }, 1000);
+</script>
+
 </body>
 </html>
